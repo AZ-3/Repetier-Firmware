@@ -225,7 +225,7 @@ PTC-Thermistors
 52: USER_THERMISTORTABLE2 als PTC
 60: HEATER_USES_AD8495 (Delivers 5mV/degC)
 100: AD595 */
-#define EXT0_TEMPSENSOR_TYPE                3
+#define EXT0_TEMPSENSOR_TYPE                8
 
 /** \brief Analog input pin for reading temperatures or pin enabling SS for MAX6675 */
 #define EXT0_TEMPSENSOR_PIN                 TEMP_0_PIN
@@ -328,7 +328,7 @@ The codes are only executed for multiple extruder when changing the extruder. */
 #define EXT0_DESELECT_COMMANDS              ""
 
 /** \brief The extruder cooler is a fan to cool the extruder when it is heating. If you turn the etxruder on, the fan goes on. */
-#define EXT0_EXTRUDER_COOLER_PIN            -1
+#define EXT0_EXTRUDER_COOLER_PIN            FET2
 
 /** \brief PWM speed for the cooler fan. 0=off 255=full speed */
 #define EXT0_EXTRUDER_COOLER_SPEED          255
@@ -388,7 +388,7 @@ PTC-Thermistors
 52: USER_THERMISTORTABLE2 als PTC
 60: HEATER_USES_AD8495 (Delivers 5mV/degC)
 100: AD595 */
-#define EXT1_TEMPSENSOR_TYPE                3
+#define EXT1_TEMPSENSOR_TYPE                8
 
 /** \brief Analog input pin for reading temperatures or pin enabling SS for MAX6675 */
 #define EXT1_TEMPSENSOR_PIN                 TEMP_1_PIN
@@ -498,7 +498,7 @@ The codes are only executed for multiple extruder when changing the extruder. */
 #define EXT1_DESELECT_COMMANDS              ""
 
 /** \brief The extruder cooler is a fan to cool the extruder when it is heating. If you turn the etxruder on, the fan goes on. */
-#define EXT1_EXTRUDER_COOLER_PIN            -1
+#define EXT1_EXTRUDER_COOLER_PIN            FET2
 
 /** \brief PWM speed for the cooler fan. 0=off 255=full speed */
 #define EXT1_EXTRUDER_COOLER_SPEED          255
@@ -533,7 +533,7 @@ The codes are only executed for multiple extruder when changing the extruder. */
 #define HEATED_BED_MIN_TEMP                 40
 
 /** \brief Maximal temperature which can be set for the heating bed */
-#define HEATED_BED_MAX_TEMP                 180
+#define HEATED_BED_MAX_TEMP                 120
 
 /** \brief Select type of your heated bed. It's the same as for EXT0_TEMPSENSOR_TYPE
 set to 0 if you don't have a heated bed */
@@ -1074,7 +1074,7 @@ Above this value the z compensation will distribute the roughness of the surface
 #define PRECISE_HEAT_BED_SCAN_WARMUP_DELAY          (uint32_t)600                                                  // [s]
 #define PRECISE_HEAT_BED_SCAN_CALIBRATION_DELAY     (uint32_t)600                                                  // [s]
 #define PRECISE_HEAT_BED_SCAN_BED_TEMP_PLA          60                                                                  // [°C]
-#define PRECISE_HEAT_BED_SCAN_BED_TEMP_ABS          120                                                                 // [°C]
+#define PRECISE_HEAT_BED_SCAN_BED_TEMP_ABS          80                                                                  // [°C]
 #define PRECISE_HEAT_BED_SCAN_EXTRUDER_TEMP_SCAN    100                                                                 // [°C]
 #define PRECISE_HEAT_BED_SCAN_EXTRUDER_TEMP_PLA     230                                                                 // [°C]
 #define PRECISE_HEAT_BED_SCAN_EXTRUDER_TEMP_ABS     260                                                                 // [°C]
