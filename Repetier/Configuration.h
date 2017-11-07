@@ -44,7 +44,7 @@ To override EEPROM settings with config settings, set EEPROM_MODE 0 */
 
 /** \brief Define the type of your device */
 //#define MOTHERBOARD                         DEVICE_TYPE_RF1000
-//#define MOTHERBOARD                         DEVICE_TYPE_RF2000
+#define MOTHERBOARD                         DEVICE_TYPE_RF2000
 #define PROTOTYPE_PCB                       0                                                   // 1 = first PCB's / 0 = Final
 
 #ifndef MOTHERBOARD
@@ -567,7 +567,7 @@ instead of driving both with a single stepper. The same works for the other axis
 
 /** \brief Total size of the buffer used to store the long filenames */
 #define LONG_FILENAME_LENGTH                (13*MAX_VFAT_ENTRIES+1)
-#define SD_MAX_FOLDER_DEPTH                 2
+#define SD_MAX_FOLDER_DEPTH                 4
 
 
 // ##########################################################################################
@@ -645,7 +645,7 @@ same setting. */
 #define UI_KEY_MIN_REPEAT                   50
 
 /** \brief Default beeper mode. */
-#define BEEPER_MODE                         1                                                   // 1 = on, 0 = off
+#define BEEPER_MODE                         0                                                   // 1 = on, 0 = off
 
 /** \brief Beeper sound definitions for short beeps during key actions
 and longer beeps for important actions.
@@ -672,8 +672,8 @@ Values must be in range 1..255 */
 
 /** \brief Values used for preheat */
 #define UI_SET_PRESET_HEATED_BED_TEMP_PLA   60
-#define UI_SET_PRESET_EXTRUDER_TEMP_PLA     180
-#define UI_SET_PRESET_HEATED_BED_TEMP_ABS   110
+#define UI_SET_PRESET_EXTRUDER_TEMP_PLA     200
+#define UI_SET_PRESET_HEATED_BED_TEMP_ABS   80
 #define UI_SET_PRESET_EXTRUDER_TEMP_ABS     240
 
 /** \brief Values used for unload(unmount)/load(mount) filament */
@@ -681,10 +681,10 @@ Values must be in range 1..255 */
 #define UI_SET_EXTRUDER_TEMP_MOUNT          200
 
 /** \brief Extreme values */
-#define UI_SET_MIN_HEATED_BED_TEMP          55
-#define UI_SET_MAX_HEATED_BED_TEMP          160
+#define UI_SET_MIN_HEATED_BED_TEMP          50
+#define UI_SET_MAX_HEATED_BED_TEMP          120
 #define UI_SET_MIN_EXTRUDER_TEMP            70
-#define UI_SET_MAX_EXTRUDER_TEMP            270
+#define UI_SET_MAX_EXTRUDER_TEMP            275
 #define UI_SET_EXTRUDER_FEEDRATE            1.5f                                                 // [mm/sec]
 #define UI_SET_EXTRUDER_RETRACT_DISTANCE    3                                                   // [mm]
 #define COOLDOWN_THRESHOLD                  40                                                  // [°C]
