@@ -1257,7 +1257,7 @@ Above this value the z compensation will distribute the roughness of the surface
 #define RGB_LIGHT_DEFAULT_MODE              RGB_MODE_AUTOMATIC
 
 /** \brief Specifies the time interval after which the RGB light status switches from idle to color change */
-#define RGB_LIGHT_COLOR_CHANGE_DELAY        30                                                  // [s]
+#define RGB_LIGHT_COLOR_CHANGE_DELAY        15                                                  // [s]
 
 /** \brief Specfies the temperature tolerance for the switching of the RGB light */
 #define RGB_LIGHT_TEMP_TOLERANCE            5.0                                                 // [°C]
@@ -1273,18 +1273,18 @@ Above this value the z compensation will distribute the roughness of the surface
 #define RGB_PRINTING_B                      255
 
 /** \brief Specifies the color for cool down */
-#define RGB_COOLING_R                       0
-#define RGB_COOLING_G                       0
+#define RGB_COOLING_R                       200
+#define RGB_COOLING_G                       200
 #define RGB_COOLING_B                       255
 
 /** \brief Specifies the color for idle */
-#define RGB_IDLE_R                          255
+#define RGB_IDLE_R                          225
 #define RGB_IDLE_G                          255
-#define RGB_IDLE_B                          255
+#define RGB_IDLE_B                          225
 
 /** \brief Specifies the color for Manual input */
-#define RGB_MANUAL_R                        128
-#define RGB_MANUAL_G                        128
+#define RGB_MANUAL_R                        225
+#define RGB_MANUAL_G                        225
 #define RGB_MANUAL_B                        255
 
 #endif // FEATURE_RGB_LIGHT_EFFECTS
